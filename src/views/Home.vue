@@ -1,18 +1,45 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="pitch_div">
+    <div id="pitch">
+      <component :is="formation"></component>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  name: "Home",
+
+  computed: {
+    formation: function() {
+      return this.$store.getters.getFormation;
+    },
+
+    players: function() {
+      return this.$store.getters.getPlayersComp;
+    }
   }
-}
+};
 </script>
+
+<style scoped>
+#pitch_div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 80%;
+}
+
+#pitch {
+  width: 100%;
+  height: 100%;
+  background: url("../assets/pitch.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+</style>
