@@ -110,7 +110,7 @@
             <p>{{player.stats.weakFoot}}</p>
           </div>
           <div id="value">
-            <p>Value:</p>
+            <p>Value</p>
             <p>{{player.stats.value}}</p>
           </div>
         </div>
@@ -215,6 +215,28 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 600px) {
+  #playerDetailsWrapper {
+    width: 100% !important;
+    height: 100% !important;
+    flex-direction: column !important;
+  }
+
+  .button_exit {
+    position: relative;
+    top: 1% !important;
+    left: 93% !important;
+    z-index: 1000;
+    display: inline-block;
+    border-radius: 50%;
+    width: 4vh;
+    height: 4vh;
+    text-align: center;
+    color: #727373;
+    border: solid 1px rgba(39, 39, 39, 0.65);
+  }
+}
+
 .allPositionsContainer p {
   margin-left: 0.2vw;
 }

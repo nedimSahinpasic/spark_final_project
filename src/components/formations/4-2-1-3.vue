@@ -272,6 +272,22 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 600px) {
+  .playerName {
+    width: 100% !important;
+    height: 100% !important;
+    background: white;
+    opacity: 0.8;
+  }
+
+  .playerPic img {
+    width: 85% !important;
+    margin: auto;
+    height: auto;
+    display: block;
+  }
+}
+
 .player:hover {
   cursor: pointer;
 }

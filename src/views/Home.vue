@@ -25,6 +25,17 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 600px) {
+  #pitch_div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80% !important;
+    height: 80%;
+  }
+}
+
 #pitch_div {
   position: absolute;
   top: 50%;

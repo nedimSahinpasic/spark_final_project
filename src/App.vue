@@ -20,8 +20,14 @@ export default {
 </script>
 
 <style>
-html,
+html {
+  height: 100%;
+}
 body {
+  min-height: 100%;
+}
+
+#app {
   height: 100%;
 }
 

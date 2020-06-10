@@ -126,6 +126,32 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 600px) {
+  .itemsContainer {
+    display: flex;
+    flex-flow: column !important;
+    height: 100% !important;
+    margin-top: 3vh !important;
+    justify-content: flex-start !important;
+  }
+
+  .item {
+    display: flex;
+    flex-flow: column;
+    align-self: flex-end;
+    justify-self: center;
+    flex: 1;
+    max-width: 80vw !important;
+    margin-bottom: 3vh !important;
+  }
+
+  .pictureWrapper img {
+    display: block;
+    width: 70vw !important;
+    height: 35vh;
+  }
+}
+
 .fa:hover {
   cursor: pointer;
 }
@@ -135,10 +161,11 @@ export default {
 }
 
 .itemsContainer {
+  min-height: inherit;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  height: 100%;
+  justify-self: center;
 }
 
 .item {
@@ -151,9 +178,9 @@ export default {
 }
 
 .playersForSelection {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 100%;
+  min-height: inherit;
 }
 
 .fa-heart {
@@ -277,9 +304,9 @@ export default {
 }
 
 #wrapper {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: calc(100% - 60px);
+  min-height: calc(100vh - 100px);
 }
 
 .header {

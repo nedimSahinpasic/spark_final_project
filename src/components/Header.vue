@@ -5,6 +5,41 @@
         <h3>Perfect squad</h3>
       </div>
 
+      <a href="#" class="toggle-button" @click="openMobileMenu=!openMobileMenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+
+      <div class="mobileMenu" v-if="openMobileMenu">
+        <div class="mobileMenuButtons" @click="players(); openMobileMenu=!openMobileMenu">
+          <p>Players</p>
+        </div>
+
+        <div class="mobileMenuButtons" @click="favorites(); openMobileMenu=!openMobileMenu">
+          <p>Favorites</p>
+        </div>
+
+        <div class="mobileFormationContariner">
+          <div class="formation_dropdown">
+            <p @click="pushHome(); openMobileMenu=!openMobileMenu">Formation</p>
+            <div class="Formation" @click="helper()">
+              <p>{{this.title}}</p>
+
+              <div class="dropDownList" v-show="isOpen">
+                <div v-for="(item, i) in object" :key="i" class="dropDownItem">
+                  <a
+                    href="#"
+                    @click="passFormation(i); openMobileMenu=!openMobileMenu"
+                    :id="i"
+                  >{{ item.formation }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="second_part">
         <div class="Players" @click="players()">
           <p>Players</p>
@@ -46,7 +81,8 @@ export default {
     return {
       isOpen: false,
       title: ": none selected",
-      arrayForDropColor: []
+      arrayForDropColor: [],
+      openMobileMenu: false
     };
   },
 
@@ -83,8 +119,8 @@ export default {
     },
 
     pushHome: function() {
-      document.getElementById("project_body").style.height =
-        "calc(100vh - 40px)";
+      /*  document.getElementById("project_body").style.height =
+        "calc(100vh - 40px)"; */
       this.$router.push("/").catch(() => {});
     },
 
@@ -97,6 +133,61 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  #second_part {
+    display: none !important;
+  }
+
+  .mobileMenu {
+    position: absolute;
+    background: #1a5a07;
+    opacity: 0.9;
+    top: 40px;
+    width: 100%;
+    height: auto;
+    display: flex !important;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .mobileMenuButtons:hover {
+    cursor: pointer;
+  }
+
+  .mobileMenuButtons {
+    margin-top: 2vh;
+  }
+
+  .mobileMenuButtons p {
+    color: white;
+  }
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
 .dropDownList a:hover {
   background: rgba(1, 1, 1, 0.1);
 }
