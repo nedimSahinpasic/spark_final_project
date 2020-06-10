@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div id="menu-container">
-      <div class="Perfect-Squad" @click="pushHome()">
+      <div class="Perfect-Squad" @click="pushHome(); openMobileMenu=!openMobileMenu">
         <h3>Perfect squad</h3>
       </div>
 
