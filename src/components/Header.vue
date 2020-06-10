@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div id="menu-container">
-      <div class="Perfect-Squad">
+      <div class="Perfect-Squad" @click="pushHome()">
         <h3>Perfect squad</h3>
       </div>
 
@@ -270,7 +270,7 @@ export default {
 }
 
 .Perfect-Squad:hover {
-  cursor: default;
+  cursor: pointer;
 }
 
 .Perfect-Squad h3 {
