@@ -149,7 +149,12 @@
       </div>
 
       <div id="rm" class="playerDiv">
-        <div class="playerLoaded" v-for="(player, index) in filter('rm')" :key="index">
+        <div
+          class="playerLoaded"
+          v-for="(player, index) in filter('rm')"
+          :key="index"
+          @click="removeFromFav('RM', 'rm', player)"
+        >
           <div class="playerPic">
             <img :src="player.formationPicture" />
           </div>

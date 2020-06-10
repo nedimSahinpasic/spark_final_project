@@ -31,8 +31,8 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80% !important;
-    height: 80%;
+    width: 85% !important;
+    height: 90% !important;
   }
 }
 

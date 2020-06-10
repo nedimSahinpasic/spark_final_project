@@ -216,6 +216,33 @@ export default {
 
 <style scoped>
 @media (max-width: 600px) {
+  .allPositionsContainer p {
+    margin-left: 4px !important;
+  }
+
+  img {
+    justify-self: center;
+  }
+
+  #position {
+    justify-self: center !important;
+  }
+
+  #starsOuter {
+    justify-self: center !important;
+  }
+
+  #playerName {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr 1fr !important;
+    grid-column-gap: 30px !important;
+  }
+
+  #name {
+    white-space: normal !important;
+  }
+
   #playerDetailsWrapper {
     width: 100% !important;
     height: 100% !important;
