@@ -102,7 +102,15 @@ export default {
 
       this.title = ": " + formation;
       this.$store.commit("storeFormationClass", formation);
-      this.$router.push("/").catch(() => {});
+
+      this.$store.commit(adjustName(formation));
+      this.$store.commit("playersByPositions");
+
+      function adjustName(name) {
+        name = name.replace(/[!@#$%^&*-]/g, "");
+        name = "_" + name + "_";
+        return name;
+      }
     },
 
     players: function() {
@@ -113,20 +121,17 @@ export default {
 
     helper: function() {
       this.isOpen = !this.isOpen;
-      /* document.getElementById("project_body").style.height =
-        "calc(100vh - 40px)";
-      this.$router.push("/").catch(() => {}); */
     },
 
     pushHome: function() {
-      /*  document.getElementById("project_body").style.height =
-        "calc(100vh - 40px)"; */
+      this.$store.commit("isFavoriteChange", false);
       this.$router.push("/").catch(() => {});
     },
 
     favorites: function() {
       this.isOpen = false;
-      /* this.$router.push("/favorites").catch(() => {}); */
+      this.$store.commit("isFavoriteChange", true);
+      this.$router.push("/favorites").catch(() => {});
     }
   }
 };
@@ -313,7 +318,7 @@ export default {
 }
 
 .Favorites:hover {
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 .Favorites {

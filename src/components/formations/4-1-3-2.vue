@@ -229,18 +229,24 @@ export default {
   computed: {
     players: function() {
       return this.$store.getters.get_4132_players;
+    },
+
+    favorites: function() {
+      return this.$store.getters.getIsFavorite;
     }
   },
 
   methods: {
     select: function(position, required) {
-      this.$store.commit("positionFunction", {
-        position,
-        formation: 4132,
-        required
-      });
+      if (this.favorites == true) {
+        this.$store.commit("positionFunction", {
+          position,
+          formation: 4132,
+          required
+        });
 
-      this.$router.push("/favorites").catch(() => {});
+        this.$router.push("/selectfavorite").catch(() => {});
+      }
     },
 
     removeFromFav: function(position, required, player) {
@@ -251,19 +257,21 @@ export default {
         player
       });
 
-      this.$router.push("/favorites").catch(() => {});
+      this.$router.push("/selectfavorite").catch(() => {});
     },
 
     filter: function(position) {
-      let requiredPlayer = [];
+      if (this.favorites == true) {
+        let requiredPlayer = [];
 
-      this.players.forEach(player => {
-        if (player.requiredPosition == position && player.favorite) {
-          requiredPlayer.push(player);
-        }
-      });
+        this.players.forEach(player => {
+          if (player.requiredPosition == position && player.favorite) {
+            requiredPlayer.push(player);
+          }
+        });
 
-      return requiredPlayer;
+        return requiredPlayer;
+      }
     }
   }
 };
@@ -272,16 +280,16 @@ export default {
 <style scoped>
 @media (max-width: 600px) {
   .playerName {
-    width: 100% !important;
-    height: 100% !important;
+    width: 16.3vw !important;
+    height: auto !important;
     background: white;
     opacity: 0.8;
   }
 
   .playerPic img {
-    width: 85% !important;
+    width: 15vw !important;
     margin: auto;
-    height: auto;
+    height: auto !important;
     display: block;
   }
 }
@@ -303,8 +311,8 @@ export default {
 }
 
 .playerName {
-  width: 5vw;
-  height: 2vh;
+  width: auto;
+  height: auto;
   background: white;
   opacity: 0.8;
 }
@@ -313,6 +321,7 @@ export default {
   width: 5vw;
   height: auto;
   display: block;
+  margin: auto;
 }
 
 #pitch {

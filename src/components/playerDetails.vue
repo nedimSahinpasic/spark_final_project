@@ -349,7 +349,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.3);
   justify-self: end;
   align-self: center;
-  flex: 0 0 65%;
+  flex: 0 0 60%;
 }
 
 #skill_per {

@@ -26,6 +26,7 @@ export default new Vuex.Store({
     get_3322_players: state => state._3322_players,
     getRemoveFav: state => state.removeFav,
     getRequestedPosition: state => state.requestedPosition,
+    getIsFavorite: state => state.isFavorite,
   },
 
   state: {
@@ -50,6 +51,7 @@ export default new Vuex.Store({
     currentFormationPlayers: [],
     removeFav: null,
     requestedPosition: '',
+    isFavorite: false,
 
   },
 
@@ -67,9 +69,13 @@ export default new Vuex.Store({
 
   mutations: {
 
+    isFavoriteChange: function (state, value) {
+      state.isFavorite = value;
+
+    },
+
     addToFavorites: function (state, player) {
-      console.log(player);
-      console.log(state.class);
+
 
       switch (state.class) {
         case '4-4-2':
@@ -105,14 +111,13 @@ export default new Vuex.Store({
         })
       }
 
-      console.log(state._442_players);
+
     },
 
     removeFromFavorites: function (state, player) {
 
       state.removeFav = false;
-      console.log(player);
-      console.log(state.class);
+
 
       switch (state.class) {
         case '4-4-2':
@@ -148,7 +153,7 @@ export default new Vuex.Store({
         })
       }
 
-      console.log(state._442_players);
+
     },
 
     _442_: function (state) {

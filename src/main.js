@@ -16,6 +16,8 @@ import _4222_ from './components/formations/4-2-2-2.vue'
 import _532_ from './components/formations/5-3-2.vue'
 import _3322_ from './components/formations/3-3-2-2.vue'
 
+
+
 import '@fortawesome/fontawesome-free/css/all.css'
 
 Vue.config.productionTip = false
@@ -27,6 +29,7 @@ Vue.component('4-2-1-3', _4213_)
 Vue.component('4-2-2-2', _4222_)
 Vue.component('5-3-2', _532_)
 Vue.component('3-3-2-2', _3322_)
+
 
 Vue.component('mainPageHeader', Header)
 Vue.component('pageBody', Body)
