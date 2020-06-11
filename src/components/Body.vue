@@ -20,8 +20,8 @@ export default {
   height: calc(100vh - 40px);
   overflow-y: auto;
   overflow-x: hidden;
-  -ms-overflow-style: none; /* IE 11 */
-  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #project_body::-webkit-scrollbar {
