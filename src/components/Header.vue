@@ -11,7 +11,7 @@
         <span class="bar"></span>
       </a>
 
-      <div class="mobileMenu" v-if="openMobileMenu">
+      <div class="mobileMenu" v-show="openMobileMenu">
         <div class="mobileMenuButtons" @click="players(); openMobileMenu=!openMobileMenu">
           <p>Players</p>
         </div>
@@ -31,7 +31,7 @@
                   <a
                     href="#"
                     @click="passFormation(i); openMobileMenu=!openMobileMenu"
-                    :id="i"
+                    :id="i + 'mobile'"
                   >{{ item.formation }}</a>
                 </div>
               </div>
@@ -99,6 +99,7 @@ export default {
       if (check == false) this.arrayForDropColor.push(formation);
 
       document.getElementById(formation).style.color = "#f09e00";
+      document.getElementById(formation + "mobile").style.color = "#f09e00";
 
       this.title = ": " + formation;
       this.$store.commit("storeFormationClass", formation);
@@ -107,7 +108,7 @@ export default {
       this.$store.commit("playersByPositions");
 
       function adjustName(name) {
-        name = name.replace(/[!@#$%^&*-]/g, "");
+        name = name.replace(/[-]/g, "");
         name = "_" + name + "_";
         return name;
       }
