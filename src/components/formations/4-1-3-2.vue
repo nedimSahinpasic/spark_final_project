@@ -20,7 +20,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -38,7 +39,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -56,7 +58,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -69,7 +72,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -87,7 +91,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -105,7 +110,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -123,7 +129,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -141,7 +148,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -159,7 +167,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -177,7 +186,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 
@@ -195,7 +205,8 @@
             <img :src="player.formationPicture" />
           </div>
           <div class="playerName">
-            <p>{{player.lastName}}</p>
+            <p v-if="player.lastName">{{player.lastName}}</p>
+            <p v-else>{{player.name}}</p>
           </div>
         </div>
 

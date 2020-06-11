@@ -264,6 +264,16 @@ export default {
   }
 }
 
+#playerSkills::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+#playerBasic::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 .allPositionsContainer p {
   margin-left: 0.2vw;
 }
@@ -387,6 +397,8 @@ export default {
 }
 
 #playerSkills {
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -516,8 +528,8 @@ export default {
 }
 
 #wrapper {
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   background: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0;
@@ -541,6 +553,8 @@ export default {
   overflow: auto;
   flex: 1;
   padding: 3vh;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
 }
 
 #playerSkills {

@@ -16,8 +16,16 @@ export default {
   background-repeat: no-repeat;
   background-position: 0% 0%;
   background-size: 100% 100%;
-  max-width: 100% !important;
-  min-height: calc(100vh - 40px);
-  position: relative;
+  width: 100% !important;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
+}
+
+#project_body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 </style>
