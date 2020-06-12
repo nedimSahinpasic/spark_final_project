@@ -7,7 +7,10 @@
       <div id="playerBasic">
         <div id="playerName">
           <h4 id="name">{{player.name}} {{player.lastName}}</h4>
-          <h4 id="position">{{player.stats.position}}</h4>
+          <h4
+            id="position"
+            :style="{ background:'#' + calculateColor(player)}"
+          >{{player.stats.position}}</h4>
           <div id="starsOuter">
             <i
               class="fas fa-star"
@@ -132,7 +135,10 @@
                 <p>{{skill.name}}</p>
               </div>
               <div id="skill_bar">
-                <div id="skill_per" :style="{ width: skill.value + '%'}"></div>
+                <div
+                  id="skill_per"
+                  :style="{ width: skill.value + '%', background:'#' + calculateColor(player)}"
+                ></div>
               </div>
               <div id="skill_per_num">
                 <p>{{skill.value}}</p>
@@ -190,6 +196,32 @@ export default {
       }
       player.popularity.grades.push(popularityGrade);
       this.$forceUpdate();
+    },
+
+    calculateColor(player) {
+      let position = player.stats.position;
+
+      if (position === "GK") {
+        return "54688e";
+      }
+
+      if (position === "CB" || position === "LB" || position === "RB") {
+        return "5b2f3b";
+      }
+
+      if (
+        position === "DM" ||
+        position === "CM" ||
+        position === "LM" ||
+        position === "RM" ||
+        position === "AM"
+      ) {
+        return "589a5f";
+      }
+
+      if (position === "CF" || position === "LW" || position === "RW") {
+        return "ced02e";
+      }
     }
   },
 
@@ -354,15 +386,12 @@ export default {
 #skill_per {
   height: 6px;
   border: solid 1px rgba(39, 39, 39, 0.1);
-  background-color: #21723a;
   flex: 0 0 5%;
 }
 
 .skill {
-  /* white-space: nowrap; */
   width: 100%;
   display: flex;
-  /*  justify-content: space-between; */
 }
 
 .skillsWrapper {
@@ -396,8 +425,8 @@ export default {
 }
 
 #playerSkills {
-  -ms-overflow-style: none; /* IE 11 */
-  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -450,20 +479,6 @@ export default {
   width: 0%;
   color: #eaba07;
 }
-
-/* #starsOuter::before {
-  content: "\f005 \f005 \f005 \f005 \f005";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  color: #b8b8b8;
-} */
-
-/* #starsInner::before {
-  content: "\f005 \f005 \f005 \f005 \f005";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  color: #eaba07;
-} */
 
 #playerInfo {
   margin-top: 1vh;
@@ -552,8 +567,8 @@ export default {
   overflow: auto;
   flex: 1;
   padding: 3vh;
-  -ms-overflow-style: none; /* IE 11 */
-  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #playerSkills {

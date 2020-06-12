@@ -355,7 +355,6 @@ export default new Vuex.Store({
       state.formationsData = data.formations;
       state.fullObj = data;
       state.currentFormationPlayers = data.players;
-
     },
 
     storeFormationClass: function (state, data) {
