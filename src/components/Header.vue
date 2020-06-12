@@ -82,6 +82,7 @@ export default {
       isOpen: false,
       title: ": none selected",
       arrayForDropColor: [],
+      arrayForDropColorMobile: [],
       openMobileMenu: false
     };
   },
@@ -89,14 +90,19 @@ export default {
   methods: {
     passFormation: function(formation) {
       let check = false;
+      let checkMobile = false;
 
       this.arrayForDropColor.forEach(element => {
         document.getElementById(element).style.color = "";
 
+        document.getElementById(element + "mobile").style.color = "";
+
         if (element == formation) check = true;
+        if (element == formation + "mobile") checkMobile = true;
       });
 
       if (check == false) this.arrayForDropColor.push(formation);
+      if (checkMobile == false) this.arrayForDropColorMobile.push(formation);
 
       document.getElementById(formation).style.color = "#f09e00";
       document.getElementById(formation + "mobile").style.color = "#f09e00";
@@ -155,7 +161,7 @@ export default {
     top: 40px;
     width: 100%;
     height: auto;
-    display: flex !important;
+    display: flex;
     flex-flow: column;
     align-items: center;
   }
@@ -171,10 +177,6 @@ export default {
   .mobileMenuButtons p {
     color: white;
   }
-}
-
-.mobileMenu {
-  display: none;
 }
 
 .toggle-button .bar {

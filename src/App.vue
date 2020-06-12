@@ -13,8 +13,6 @@ export default {
       "fetchData",
       "https://jsonblob.com/api/jsonBlob/50fd5df9-8283-11ea-a9e3-ab457510f846"
     );
-
-    console.log(this.$store.getters.getFullObj);
   }
 };
 </script>
