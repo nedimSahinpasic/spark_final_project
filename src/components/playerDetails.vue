@@ -345,7 +345,6 @@ export default {
 
 #skill_bar {
   height: 6px;
-  border: solid 1px rgba(39, 39, 39, 0.1);
   background-color: rgba(0, 0, 0, 0.3);
   justify-self: end;
   align-self: center;
