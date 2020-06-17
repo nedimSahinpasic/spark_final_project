@@ -22,13 +22,13 @@ import '@fortawesome/fontawesome-free/css/all.css'
 
 Vue.config.productionTip = false
 
-Vue.component('4-4-2', _442_)
-Vue.component('4-1-3-2', _4132_)
-Vue.component('4-3-3', _433_)
-Vue.component('4-2-1-3', _4213_)
-Vue.component('4-2-2-2', _4222_)
-Vue.component('5-3-2', _532_)
-Vue.component('3-3-2-2', _3322_)
+Vue.component('test4-4-2', _442_)
+Vue.component('test4-1-3-2', _4132_)
+Vue.component('test4-3-3', _433_)
+Vue.component('test4-2-1-3', _4213_)
+Vue.component('test4-2-2-2', _4222_)
+Vue.component('test5-3-2', _532_)
+Vue.component('test3-3-2-2', _3322_)
 
 
 Vue.component('mainPageHeader', Header)

@@ -131,7 +131,7 @@ export default {
     display: flex;
     flex-flow: column !important;
     height: 100% !important;
-    margin-top: 3vh !important;
+    margin: 3vh 0vh !important;
     justify-content: flex-start !important;
   }
 
@@ -141,14 +141,18 @@ export default {
     align-self: flex-end;
     justify-self: center;
     flex: 1;
-    max-width: 80vw !important;
+    width: 80% !important;
     margin-bottom: 3vh !important;
+  }
+
+  .pictureWrapper {
+    height: auto !important;
   }
 
   .pictureWrapper img {
     display: block;
-    width: 70vw !important;
-    height: 35vh;
+    width: 100% !important;
+    height: auto !important;
   }
 }
 
@@ -166,20 +170,21 @@ export default {
   flex-flow: row;
   justify-content: space-around;
   justify-self: center;
+  flex-wrap: wrap;
 }
 
 .item {
   display: flex;
   flex-flow: column;
   align-self: center;
-  flex: 1;
-  max-width: 20vw;
-  margin: 0 0.5vw;
+  width: 350px;
+  height: 414px;
+  margin: 10px 10px;
 }
 
 .playersForSelection {
   position: relative;
-  width: 100%;
+  min-width: 100%;
   min-height: inherit;
 }
 
@@ -233,10 +238,14 @@ export default {
   justify-content: flex-start;
 }
 
+.pictureWrapper {
+  height: 350px;
+}
+
 .pictureWrapper img {
   display: block;
   width: 100%;
-  height: 35vh;
+  height: 350px;
 }
 
 .nameWrapper h4 {
@@ -305,7 +314,7 @@ export default {
 
 #wrapper {
   position: relative;
-  width: 100%;
+  min-width: 100%;
   min-height: calc(100vh - 100px);
 }
 

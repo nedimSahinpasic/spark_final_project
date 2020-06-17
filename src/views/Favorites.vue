@@ -14,7 +14,9 @@ export default {
 
   computed: {
     formation: function() {
-      return this.$store.getters.getFormation;
+      if (this.$store.getters.getFormation)
+        return "test" + this.$store.getters.getFormation;
+      return 0;
     },
 
     players: function() {

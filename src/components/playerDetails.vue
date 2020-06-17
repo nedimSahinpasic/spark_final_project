@@ -464,6 +464,7 @@ export default {
   align-self: center;
   justify-self: right;
   color: #b8b8b8;
+  white-space: nowrap;
 }
 
 #starsOuter:hover {
@@ -560,7 +561,7 @@ export default {
   transform: translate(50%, 50%);
   position: absolute;
   display: flex;
-  padding: 5vh;
+  padding: 4vh;
 }
 
 #playerBasic {
