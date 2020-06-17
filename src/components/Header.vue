@@ -27,12 +27,14 @@
               <p>{{this.title}}</p>
 
               <div class="dropDownList" v-show="isOpen">
-                <div v-for="(item, i) in object" :key="i" class="dropDownItem">
-                  <a
-                    href="#"
-                    @click="passFormation(i); openMobileMenu=!openMobileMenu"
-                    :id="i + 'mobile'"
-                  >{{ item.formation }}</a>
+                <div
+                  v-for="(item, i) in object"
+                  :key="i"
+                  class="dropDownItem"
+                  @click="passFormation(i); openMobileMenu=!openMobileMenu"
+                  :id="i + 'mobile'"
+                >
+                  <a>{{ item.formation }}</a>
                 </div>
               </div>
             </div>
@@ -55,8 +57,14 @@
             <p>{{this.title}}</p>
 
             <div class="dropDownList" v-show="isOpen">
-              <div v-for="(item, i) in object" :key="i" class="dropDownItem">
-                <a href="#" @click="passFormation(i)" :id="i">{{ item.formation }}</a>
+              <div
+                v-for="(item, i) in object"
+                :key="i"
+                class="dropDownItem"
+                @click="passFormation(i)"
+                :id="i"
+              >
+                <a>{{ item.formation }}</a>
               </div>
             </div>
           </div>
@@ -196,10 +204,6 @@ export default {
   height: 21px;
 }
 
-.dropDownList a:hover {
-  background: rgba(1, 1, 1, 0.1);
-}
-
 #second_part p:hover {
   background: rgba(1, 1, 1, 0.1);
 }
@@ -216,6 +220,10 @@ export default {
 
 .dropDownItem {
   text-align: center;
+}
+
+.dropDownItem:hover {
+  opacity: 0.9;
 }
 
 .formation_dropdown p {

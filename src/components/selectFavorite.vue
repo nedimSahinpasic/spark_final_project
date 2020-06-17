@@ -179,7 +179,7 @@ export default {
   align-self: center;
   width: 350px;
   height: 414px;
-  margin: 10px 10px;
+  margin: 20px 10px;
 }
 
 .playersForSelection {
