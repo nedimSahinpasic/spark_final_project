@@ -32,9 +32,8 @@
                   :key="i"
                   class="dropDownItem"
                   @click="passFormation(i); openMobileMenu=!openMobileMenu"
-                  :id="i + 'mobile'"
                 >
-                  <a>{{ item.formation }}</a>
+                  <a :id="i + 'mobile'">{{ item.formation }}</a>
                 </div>
               </div>
             </div>
@@ -62,9 +61,8 @@
                 :key="i"
                 class="dropDownItem"
                 @click="passFormation(i)"
-                :id="i"
               >
-                <a>{{ item.formation }}</a>
+                <a :id="i">{{ item.formation }}</a>
               </div>
             </div>
           </div>

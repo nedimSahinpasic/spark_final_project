@@ -335,8 +335,8 @@ export default {
 
 .button_exit {
   position: relative;
-  top: 13.3%;
-  left: 74%;
+  top: 13.5%;
+  left: 74.6%;
   z-index: 1000;
   display: inline-block;
   border-radius: 50%;

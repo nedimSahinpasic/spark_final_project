@@ -284,6 +284,16 @@ export default {
     height: auto !important;
     background: white;
     opacity: 0.8;
+    white-space: nowrap;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .playerName::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
   }
 
   .playerPic img {
