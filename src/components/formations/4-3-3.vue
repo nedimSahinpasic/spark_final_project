@@ -285,6 +285,7 @@ export default {
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    max-width: none !important;
   }
 
   .playerName::-webkit-scrollbar {
@@ -318,15 +319,16 @@ export default {
 }
 
 .playerName {
-  width: auto;
+  max-width: 5.8vw;
   height: auto;
   background: white;
   opacity: 0.8;
+  white-space: nowrap;
 }
 
 .playerPic img {
   width: 5vw;
-  height: auto;
+  height: 9vh;
   display: block;
   margin: auto;
 }
