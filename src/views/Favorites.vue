@@ -15,7 +15,7 @@ export default {
   computed: {
     formation: function() {
       if (this.$store.getters.getFormation)
-        return "test" + this.$store.getters.getFormation;
+        return "f" + this.$store.getters.getFormation;
       return 0;
     },
 
