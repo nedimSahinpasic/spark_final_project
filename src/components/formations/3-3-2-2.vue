@@ -366,18 +366,21 @@ export default {
 }
 
 #cb1 {
+  margin-top: auto;
   grid-area: cb1;
   align-self: center;
   justify-self: center;
 }
 
 #cb2 {
+  margin-top: auto;
   grid-area: cb2;
   align-self: center;
   justify-self: center;
 }
 
 #cb3 {
+  margin-top: auto;
   grid-area: cb3;
   align-self: center;
   justify-self: center;

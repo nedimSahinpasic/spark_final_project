@@ -369,12 +369,14 @@ export default {
 }
 
 #cb1 {
+  margin-top: auto;
   grid-area: cb1;
   align-self: center;
   justify-self: end;
 }
 
 #cb2 {
+  margin-top: auto;
   grid-area: cb2;
   align-self: center;
   justify-self: start;
