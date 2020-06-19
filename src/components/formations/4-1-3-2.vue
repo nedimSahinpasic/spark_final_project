@@ -336,16 +336,6 @@ export default {
   margin: auto;
 }
 
-#pitch {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  background-image: url("../../assets/pitch.jpg");
-  background-repeat: no-repeat;
-  background-size: fill;
-  background-size: 100% 100%;
-}
-
 #formation {
   width: 100%;
   height: 100%;
